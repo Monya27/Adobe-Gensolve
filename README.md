@@ -39,3 +39,8 @@ Processing
 Action: The polyline paths are read, regularized, and visualized for analysis.
 Output
 File: The processed, regularized shapes are saved in a new CSV file (/content/frag2_output.csv), ready for further exploration or deployment.
+
+## Isolated Output
+![WhatsApp Image 2024-08-11 at 22 46 42](https://github.com/user-attachments/assets/64006328-42fb-49c1-b784-439393d2d4b0)
+
+
