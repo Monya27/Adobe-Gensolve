@@ -1,31 +1,41 @@
-Adobe GenSolve Hackathon
+# Adobe GenSolve Hackathon
 
-Project Overview
+## Project Overview
 
 Curvetopia: A Journey into the World of Curves
+Welcome to Curvetopia—where the elegance of mathematics meets the artistry of design. Our mission? To breathe life into 2D curves by identifying, regularizing, and enhancing them with precision and beauty. In this project, we dive deep into the world of closed curves, progressively tackling more complex shapes, symmetry, and curve completion techniques.
 
-Welcome to Curvetopia, where our goal is to bring order and beauty to the world of 2D curves! This project is an exploration into identifying, regularizing, and beautifying various types of curves. We focus on closed curves and progressively work with more complex shapes, covering symmetry and curve completion techniques.
+## Problem Statement
 
-Problem Statement
+In a world dominated by pixels, creating smooth, scalable graphics requires more than just raster images. Our challenge is to develop a sophisticated process that transforms a PNG (raster) image of line art into a seamless set of curves. These curves are defined as a connected sequence of cubic Bézier curves, known for their versatility and smoothness in digital graphics. To simplify, we've chosen to work with line art in the form of polylines—sequences of points representing the essence of the shapes.
 
-The objective of this project is to develop an end-to-end process that converts a PNG (raster) image of line art into a set of curves, where the curves are defined as a connected sequence of cubic Bézier curves. For simplification, instead of using PNG images as input, the project uses line art in the form of polylines, defined as a sequence of points.
+## Task Breakdown
 
-Task Breakdown:
-Regularize Curves:
-Identify and regularize shapes such as straight lines, circles, ellipses, rectangles, rounded rectangles, regular polygons, and star shapes.
-Test the algorithm with different images containing various shapes and verify the results.
-Exploring Symmetry in Curves:
-Identify symmetry in closed shapes, starting with reflection symmetry.
-Transform the presentation as a set of points to identify and fit identical Bézier curves on points that are symmetric.
-Completing Incomplete Curves:
-Create algorithms using computer vision techniques to identify and naturally complete incomplete 2D curves that have gaps due to occlusion removal.
+### 1. Regularize Curves
+Objective: Identify and standardize shapes, including straight lines, circles, ellipses, rectangles, rounded rectangles, regular polygons, and star shapes.
+Approach: Test the algorithm with diverse images containing these shapes, ensuring accuracy and consistency.
+### 2. Exploring Symmetry in Curves
+Objective: Uncover and utilize symmetry in closed shapes, beginning with reflection symmetry.
+Approach: Convert the presentation of points to fit identical Bézier curves on symmetric points, enhancing the regularity and aesthetic appeal of the shapes.
+### 3. Completing Incomplete Curves
+Objective: Develop algorithms to naturally complete 2D curves with gaps, a common issue due to occlusion or removal.
+Approach: Leverage computer vision techniques to identify these gaps and propose the most natural curve completion.
 Code Explanation
 
-Main Functions
-read_csv(csv_path): Reads a CSV file containing paths of points defining polylines and returns a structured list of these paths.
-create_precise_shape(shape_name, contour): Generates precise geometric shapes (e.g., circle, rectangle, star) based on the identified contour.
-identify_shape(contour): Identifies the shape of the contour based on the number of vertices and other geometric properties.
-refine_contour(contour): Refines the contour for better shape approximation.
-regularize_shapes(path_XYs): Regularizes the shapes by identifying and refining the contours, then creating precise geometric shapes.
-plot_shapes(regularized_shapes): Plots the regularized shapes for visualization.
-write_output_csv(regularized_shapes, output_csv_path): Writes the regularized shapes to a new CSV file.
+Here's a quick look at the key functions that power Curvetopia:
+
+read_csv(csv_path): Reads the CSV file containing polyline paths and returns a structured list of these paths.
+create_precise_shape(shape_name, contour): Generates precise geometric shapes (e.g., circles, rectangles, stars) based on the identified contours.
+identify_shape(contour): Analyzes the contour to identify the shape by examining vertices and geometric properties.
+refine_contour(contour): Refines contours to improve shape approximation.
+regularize_shapes(path_XYs): Regularizes shapes by refining contours and generating precise geometric representations.
+plot_shapes(regularized_shapes): Visualizes the regularized shapes, offering a clear view of the transformation.
+write_output_csv(regularized_shapes, output_csv_path): Exports the regularized shapes to a new CSV file.
+Execution
+
+Input
+File: A CSV file (/content/frag2.csv) containing polyline paths.
+Processing
+Action: The polyline paths are read, regularized, and visualized for analysis.
+Output
+File: The processed, regularized shapes are saved in a new CSV file (/content/frag2_output.csv), ready for further exploration or deployment.
