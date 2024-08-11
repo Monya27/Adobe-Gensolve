@@ -25,7 +25,7 @@ Code Explanation
 
 ## Isolated Output
 ![WhatsApp Image 2024-08-11 at 22 46 42](https://github.com/user-attachments/assets/64006328-42fb-49c1-b784-439393d2d4b0)
-## Occlusion Output
+## Occlusion1 Output
 ![occlusion1](https://github.com/user-attachments/assets/a235e3ce-d658-415e-bb9b-2f6da531c914)
-## Occlusion Output
+## Occlusion2 Output
 ![occlusion2](https://github.com/user-attachments/assets/59d947da-ff57-4acc-a353-64694df97efa)
